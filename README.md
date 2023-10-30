@@ -3,7 +3,6 @@
 อ่านอิงค์ ความรู้
 https://www.thaicreate.com/php/php-websockets.html
 
-
 http://socketo.me/
 
 ปัญหาที่เคยพบ

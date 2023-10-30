@@ -1,0 +1,15 @@
+DELIMITER //
+CREATE TRIGGER your_trigger_name
+AFTER INSERT ON your_table
+FOR EACH ROW
+BEGIN
+  DECLARE @message VARCHAR(255);
+  SET @message = 'New data inserted with name: ' + NEW.name;
+
+  -- Call a PHP script to send data to WebSocket Server
+  SET @cmd = CONCAT('php /path/to/your_php_script.php "', @message, '"');
+  -- Use a system call to execute the PHP script
+  CALL sys_exec(@cmd);
+END;
+//
+DELIMITER ;

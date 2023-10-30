@@ -18,7 +18,6 @@
         socket.onmessage = function(event) {
             var receivedMessage = event.data;
             console.log("รับข้อมูล: " + receivedMessage);
-            // ทำอะไรก็ตามที่คุณต้องการกับข้อมูลที่รับมา
         };
     </script>
 </body>
